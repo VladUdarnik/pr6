@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <title>Тестування для початкових класів</title>
+</head>
+<body>
+<h1>Тестування для початкових класів</h1>
+<form>
+    <label for="question">Якого кольору трава?</label>
+    <select id="question" name="question">
+        <option value="">Оберіть відповідь</option>
+        <option value="green">Зеленого</option>
+        <option value="blue">Синього</option>
+        <option value="red">Червоного</option>
+        <option value="cyan">Блакитного</option>
+        <option value="yellow">Жовтого</option>
+    </select>
+    <br>
+    <button type="button" onclick="checkAnswer()">Перевірити</button>
+</form>
+
+<script>
+    function checkAnswer() {
+        var selectedAnswer = document.getElementById("question").value;
+        var correctAnswer = "green";
+
+        if (selectedAnswer === correctAnswer) {
+            alert("Відповідь вірна!");
+        } else {
+            alert("Відповідь невірна. Спробуйте ще раз.");
+        }
+    }
+</script>
+</body>
+</html>

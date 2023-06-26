@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Табличка з елементами</title>
+  <style>
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      height: 100vh;
+    }
+    table {
+      border-collapse: collapse;
+    }
+    tr, td {
+      border: 1px solid black;
+      padding: 5px;
+    }
+    .title {
+      font-weight: bold;
+      font-size: 20px;
+      margin-top: -450px;
+      margin-bottom: 20px;
+    }
+  </style>
+</head>
+<body>
+<div class="title">Виберіть правильну відповідь</div>
+<table>
+  <tr>
+    <td colspan="2">Логічний елемент АБО(операція диз'юнкції, логічне додавання</td>
+  </tr>
+  <tr>
+    <td>Логічний вираз</td>
+    <td>Для вводу 1 встановіть прапорець</td>
+  </tr>
+  <tr>
+    <td>0 V 0 =</td>
+    <td><center><input type="checkbox" VALUE="" name="cb1"></center></td>
+  </tr>
+  <tr>
+    <td>0 V 1 =</td>
+    <td><center><input type="checkbox" VALUE="" name="cb2"></center></td>
+  </tr>
+  <tr>
+    <td>1 V 0 =</td>
+    <td><center><input type="checkbox" VALUE="" name="cb3"></center></td>
+  </tr>
+  <tr>
+    <td>1 V 1 =</td>
+    <td><center><input type="checkbox" VALUE="" name="cb4"></center></td>
+  </tr>
+  <tr>
+    <td colspan="2"><center><input type="button" value="перевірити рішення" onmouseover="checkAnswer()"></center></td>
+  </tr>
+</table>
+<script>
+  function checkAnswer() {
+    var cb1 = document.querySelector('input[name="cb1"]:checked');
+    var cb2 = document.querySelector('input[name="cb2"]:checked');
+    var cb3 = document.querySelector('input[name="cb3"]:checked');
+    var cb4 = document.querySelector('input[name="cb4"]:checked');
+
+    if (cb2 && cb3 && !cb1 && !cb4) {
+      alert("Правильна відповідь");
+    } else {
+      alert("На жаль, відповідь не вірна");
+    }
+  }
+</script>
+</body>
+</html>

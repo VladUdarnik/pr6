@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html land="uk">
+<head>
+  <meta charset="UTF-8">
+  <title>Кольори фону</title>
+  <style>
+    body {
+      transition: background-color 0.3s ease;
+    }
+  </style>
+</head>
+<body>
+<h1>Кольори фону</h1>
+<select id="colorSelect">
+  <option value="green">Зелений</option>
+  <option value="white">Білий</option>
+  <option value="blue">Синій</option>
+</select>
+
+<script>
+  const colorSelect = document.getElementById('colorSelect');
+
+  colorSelect.addEventListener('change', function() {
+    const selectedColor = colorSelect.value;
+    document.body.style.backgroundColor = selectedColor;
+  });
+</script>
+</body>
+</html>
